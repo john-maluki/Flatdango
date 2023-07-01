@@ -56,6 +56,13 @@
   font-family: "Patrick Hand";
 }
 
+.movie-card__delete-btn {
+  width: 100px;
+  height: 25px;
+  margin-left: 50px;
+  background-color: grey;
+}
+
 .movie-card__description {
   margin-top: 20px;
   font-size: 26px;
@@ -101,6 +108,16 @@
   background-color: #813005;
 }
 
+.movie-content__danger-zone {
+  margin: 20px 0;
+  font-family: Roboto;
+}
+
+.movie-content__remove-ticket-btn {
+  width: 150px;
+  height: 30px;
+}
+
 @media (min-width: 43.75em) {
   .vertical-nav {
     width: 300px;
@@ -133,7 +150,7 @@
 
   /* Right modal */
   .modal {
-    /* display: none; */
+    display: none;
     width: 400px;
     height: 100vh;
     position: fixed;

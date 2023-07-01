@@ -11,3 +11,7 @@ a:link {
   text-decoration: none;
   color: white;
 }
+
+button {
+  cursor: pointer;
+}
