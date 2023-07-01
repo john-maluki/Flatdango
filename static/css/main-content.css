@@ -36,7 +36,7 @@
 }
 
 .movie__sold-out-status {
-  /* display: none; */
+  display: none;
   font-size: 10px;
   color: #813005;
   font-weight: bold;
@@ -159,10 +159,6 @@
     right: 0;
     transition: all 1s linear;
     color: #fff;
-  }
-
-  .modal--visible {
-    display: block;
   }
 
   .modal__close {

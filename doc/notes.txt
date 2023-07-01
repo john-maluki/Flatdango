@@ -10,3 +10,11 @@ Fonts reference
     - Roboto
     - Patric Hand
     - Gochi
+
+Li format
+ <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>

@@ -53,96 +53,13 @@
       <section class="vertical-nav">
         <h1 class="vertical-nav__title">All Movies</h1>
         <div class="vertical-nav__body">
-          <ul class="vertical-nav__items">
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
-            <li class="vertical-nav__item">
-              <div class="movie">
-                <span class="movie__title">The Giant Gila Monster</span>
-                <span class="movie__sold-out-status">SOLD OUT</span>
-              </div>
-            </li>
+          <ul id="vertical-nav__items" class="vertical-nav__items">
+            <!-- Movie items goes here -->
           </ul>
         </div>
       </section>
       <section class="movie-content">
-        <div class="movie-card">
+        <div id="movie-card" class="movie-card">
           <h1 class="movie-card__title">The Giant Gila Monster</h1>
           <div class="movie-card__body">
             <img
@@ -156,10 +73,10 @@
             </p>
           </div>
         </div>
-        <div class="movie-content__details">
+        <div id="movie-content__details" class="movie-content__details">
           <h2>Other Details</h2>
           <div class="movie-content__info">
-            <h3 id="runtime">Runtime: <span>108</span></h3>
+            <h3 id="run-time">Runtime: <span>108</span> minutes</h3>
             <h3 id="show-time">Show time: <span>04:00PM</span></h3>
             <h3 id="available-tickets">Available tickets: <span>5</span></h3>
           </div>
@@ -169,7 +86,12 @@
           <h4 class="movie-content__danger-zone">
             Remove this movie from your profile
           </h4>
-          <button class="movie-content__remove-ticket-btn">Remove</button>
+          <button
+            id="delete-ticket-btn"
+            class="movie-content__remove-ticket-btn"
+          >
+            Remove
+          </button>
         </div>
       </section>
     </main>
