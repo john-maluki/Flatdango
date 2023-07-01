@@ -1,5 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "./reset.css";
+@import "./global.css";
+@import "./header.css";
+@import "./main-content.css";
+@import "./helper.css";

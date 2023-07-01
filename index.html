@@ -3,9 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&family=Patrick+Hand+SC&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:ital,wght@0,100;0,700;1,300;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./static/css/main.css" />
     <title>Flatdango</title>
     <script defer src="./static/js/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <span>FlatDango</span>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <div>
+              <i class="fa fa-file-video-o" aria-hidden="true"></i>
+              <a href="#">Movies</a>
+            </div>
+          </li>
+          <li class="header__item">
+            <div>
+              <i class="fa fa-television" aria-hidden="true"></i>
+              <a href="#">TV Shows</a>
+            </div>
+          </li>
+          <li class="header__item">
+            <div>
+              <i class="fa fa-plus" aria-hidden="true"></i>
+              <a href="#">Watchlist</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__user-profile">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </div>
+    </header>
+    <main class="main">
+      <section class="vertical-nav">
+        <h1 class="vertical-nav__title">All Movies</h1>
+        <div class="vertical-nav__body">
+          <ul class="vertical-nav__items">
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+            <li class="vertical-nav__item">
+              <div class="movie">
+                <span class="movie__title">The Giant Gila Monster</span>
+                <span class="movie__sold-out-status">SOLD OUT</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="movie-content">
+        <div class="movie-card">
+          <h1 class="movie-card__title">The Giant Gila Monster</h1>
+          <div class="movie-card__body">
+            <img
+              class="movie-card__image"
+              src="https://www.gstatic.com/tv/thumb/v22vodart/2157/p2157_v_v8_ab.jpg"
+              alt=""
+            />
+            <p class="movie-card__description">
+              A giant lizard terrorizes a rural Texas community and a heroic
+              teenager attempts to destroy the creature.
+            </p>
+          </div>
+        </div>
+        <div class="movie-content__details">
+          <h2>Other Details</h2>
+          <div class="movie-content__info">
+            <h3 id="runtime">Runtime: <span>108</span></h3>
+            <h3 id="show-time">Show time: <span>04:00PM</span></h3>
+            <h3 id="available-tickets">Available tickets: <span>5</span></h3>
+          </div>
+          <button class="movie-content__buy-ticket-btn">Buy Ticket</button>
+        </div>
+      </section>
+    </main>
+    <section id="movie-form-modal" class="modal">
+      <div id="modal__close" class="modal__close" title="close">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <form id="modal__form" class="modal__form" action="#">
+        <label for="modal__ticket">Number of tickets:</label>
+        <input
+          class="modal__input"
+          id="modal__ticket"
+          min="1"
+          max="5"
+          type="number"
+          placeholder="tickets"
+          required
+        />
+        <input class="modal__input" type="submit" value="Buy" />
+      </form>
+    </section>
+  </body>
 </html>
