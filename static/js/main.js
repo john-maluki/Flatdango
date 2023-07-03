@@ -4,6 +4,7 @@ const buyTicketBtnNode = document.querySelector("#buy-ticket-btn");
 const moviesNode = document.querySelector("#vertical-nav__items");
 const movieCardNode = document.querySelector("#movie-card");
 const movieOtherDetailsNode = document.querySelector("#movie-content__details");
+const ticketForm = document.querySelector("#ticket__form");
 
 const MAIN_URL = "http://localhost:3000";
 
@@ -56,6 +57,21 @@ const deleteMovieByIdFromServer = (movieId) => {
       buildMoviesOnDom();
     }
   });
+};
+
+/**
+ * Deletes movie from the server by given id
+ */
+const updateMovieSoldTicketsByIdFromServer = async (movie) => {
+  return fetch(`${getDomainUrl()}/films/${movie.id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(movie),
+  })
+    .then((response) => response.json())
+    .then((movie) => movie);
 };
 
 const isMovieSoldOut = (movie) => {
@@ -130,15 +146,19 @@ const buildMovieDetailsOnDom = (movie) => {
 
   h3Runtime.textContent = movie.runtime;
   h3ShowTime.textContent = movie.showtime;
-  h3AvailableTickets.textContent = calculateAvailableMovieTickets(movie);
+  const availableTickets = calculateAvailableMovieTickets(movie);
+  h3AvailableTickets.textContent = availableTickets;
+
+  setFormInputMaxValue(availableTickets);
 
   const buyTicketButton =
     movieOtherDetailsNode.querySelector("#buy-ticket-btn");
   const movieDeleteButton =
     movieOtherDetailsNode.querySelector("#delete-ticket-btn");
-  const isSoldOut = isMovieSoldOut(movie);
 
   movieDeleteButton.addEventListener("click", handleMovieDeletion);
+
+  const isSoldOut = isMovieSoldOut(movie);
 
   if (isSoldOut) {
     buyTicketButton.textContent = "Sold Out";
@@ -147,6 +167,11 @@ const buildMovieDetailsOnDom = (movie) => {
     buyTicketButton.textContent = "Buy Ticket";
     buyTicketButton.disabled = false;
   }
+};
+
+const setFormInputMaxValue = async (availableTickets) => {
+  const ticketInput = ticketForm.querySelector("#modal__ticket");
+  ticketInput.max = availableTickets;
 };
 
 // Handlers
@@ -173,7 +198,19 @@ const handleMovieDeletion = (e) => {
   deleteMovieByIdFromServer(movieId);
 };
 
+const handleBuyingTicket = async (e) => {
+  e.preventDefault();
+  const ticketInputNode = e.target.querySelector("#modal__ticket");
+  const boughtTickets = ticketInputNode.value;
+  const movie = await fetchMovieByIdFromServer(activeMovieId);
+  movie.tickets_sold += Number.parseInt(boughtTickets);
+  movieFormModalPaneNode.classList.remove("show");
+  updatedMovie = await updateMovieSoldTicketsByIdFromServer(movie);
+  buildMovieDetailsOnDom(updatedMovie);
+};
+
 modalCloseNode.addEventListener("click", handleModalToggling);
 buyTicketBtnNode.addEventListener("click", handleModalToggling);
+ticketForm.addEventListener("submit", handleBuyingTicket);
 
 window.onload = buildMoviesOnDom;
