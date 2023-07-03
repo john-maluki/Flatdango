@@ -10,6 +10,10 @@ Flatiron Movie Theater.
 - Run this command to get the backend started: `json-server --watch db.json`
 - Test your server by visiting this route in the browser:` http://localhost:3000/films`
 
+## Running the application locally
+
+This application can be run on your local computer in a number of different ways. One method is to copy the complete path to `index.html` and paste it into the browser.
+
 ## Core Deliverables
 
 As a user, I can: - See the first movie's details, including its **poster, title, runtime,
